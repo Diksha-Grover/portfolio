@@ -22,9 +22,9 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-              "Diksha Grover",
+                "Diksha Grover",
                 1000,
-              "Frontend Developer",
+                "Frontend Developer",
                 1000,
               ]}
               wrapper="span"
@@ -33,19 +33,21 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-             Driven by purpose and fueled by passion, I write code that speaks both logic and design—creating seamless, impactful interfaces that connect with users.
+            Driven by purpose and fueled by passion, I write code that speaks both logic and design—creating seamless, impactful interfaces that connect with users.
           </p>
           <div>
-          <button className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4 cursor-pointer">
-              Hire Me
-          </button>
-          <a href="/dikshaFrontend.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 cursor-pointer">
-                Download CV
-              </span>
-            </button>
-          </a>
+            <Link href="#contact" scroll={true}>
+              <button className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4 cursor-pointer">
+                Hire Me
+              </button>
+            </Link>
+            <a href="/dikshaFrontend.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
+                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 cursor-pointer">
+                  Download CV
+                </span>
+              </button>
+            </a>
           </div>
         </motion.div>
         <motion.div
@@ -56,7 +58,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-            src="/images/hero_image.png"
+              src="/images/hero_image.png"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
