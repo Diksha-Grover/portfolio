@@ -51,15 +51,15 @@ const AboutSection = () => {
 
   return (
     <section className="text-white">
-      <div className="gap-8 items-center py-8 px-4 xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} alt='' />
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <Image src="/images/about-image.png" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-white texxt-base md:text-lg">
+          <p className="text-base lg:text-lg">
             I am a Frontend Developer with over 4 years of professional experience in building responsive and user-friendly web applications.
             I’ve worked on a variety of domains like logistics, healthcare, insurance, team management, banking and financial services, gaining valuable hands-on experience in real-world projects.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start items-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
