@@ -31,11 +31,13 @@ const HeroSection = () => {
           <button className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4">
             Hire Me
           </button>
-          <button className="m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
-            <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-              Download CV
-            </span>
-          </button>
+          <a href="/dikshaFrontend.pdf" target="_blank" rel="noopener noreferrer">
+            <button className="m-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1  text-white rounded-full">
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Download CV
+              </span>
+            </button>
+          </a>
         </div>
       </div>
       <div className="col-span-5 place-self-center mt-4 lg:mt-0">
@@ -49,7 +51,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
