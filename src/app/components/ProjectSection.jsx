@@ -58,9 +58,12 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="scroll-mt-30">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
+      <div className="flex flex-col items-center mt-4 mb-8 md:mb-12">
+        <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+          My Projects
+        </h2>
+        <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mt-3" />
+      </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project, index) => (
           <motion.li key={index} variants={cardVariants} initail="initial" animate={isInView ? "animate" : "initial"} transition={{duration: 0.3, delay: index * 0.4}}>

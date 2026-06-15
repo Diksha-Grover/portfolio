@@ -4,6 +4,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 const EmailSection = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -37,14 +38,21 @@ const EmailSection = () => {
     //     }
     // };
 
+    const emailSectionRef = useRef(null);
+    const isInView = useInView(emailSectionRef, { once: true, margin: "-100px" });
+
     return (
-        <section
+        <motion.section
+            ref={emailSectionRef}
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             id="contact"
             className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative scroll-mt-20 z-9"
         >
             <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
             <div className="z-10">
-                <h5 className="text-xl font-bold text-white my-2">
+                <h5 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 my-2">
                     Let`&apos;s Connect
                 </h5>
                 <p className="text-[#ADB7BE] mb-4 max-w-md">
@@ -77,7 +85,7 @@ const EmailSection = () => {
                             type="email"
                             id="email"
                             required
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-colors duration-200"
                             placeholder="john@google.com"
                         />
                     </div>
@@ -93,7 +101,7 @@ const EmailSection = () => {
                             type="text"
                             id="subject"
                             required
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-colors duration-200"
                             placeholder="Just saying hi"
                         />
                     </div>
@@ -107,14 +115,14 @@ const EmailSection = () => {
                         <textarea
                             name="message"
                             id="message"
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-colors duration-200"
                             placeholder="Let's talk about..."
                         />
                     </div>
                     <div className="mb-6">
                         <button
                             type="submit"
-                            className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+                            className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2.5 px-5 rounded-lg w-full hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-200"
                             onClick={() => {
                                 setEmailSubmitted(true)
                                 formRef.current.reset();
@@ -131,7 +139,7 @@ const EmailSection = () => {
                     </p>
                 )}
             </div>
-        </section>
+        </motion.section>
     );
 };
 

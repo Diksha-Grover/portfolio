@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -26,13 +26,20 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
+    <nav className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${scrolled ? "bg-[#121212]/90 backdrop-blur-md shadow-lg shadow-purple-900/20 border-b border-white/5" : "bg-[#121212]/70 backdrop-blur-sm"}`}>
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
         <Link
           href="/"
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
         >
           DG
         </Link>
