@@ -4,7 +4,26 @@ import Image from "next/image";
 import TabButton from "./TabButton";
 import { motion, useInView } from "framer-motion";
 
-const SKILLS = ["JavaScript", "TypeScript", "React.js", "Next.js", "Deno", "Remix.run", "SQL"];
+const SKILLS = [
+  "Python",
+  "SQL",
+  "PostgreSQL",
+  "Apache Spark",
+  "Airflow",
+  "Pandas",
+  "NumPy",
+  "FastAPI",
+  "AWS (S3, Lambda, Glue, Athena, RDS)",
+  "Azure (Data Factory, Synapse)",
+  "ETL / ELT",
+  "Data Modeling",
+  "Data Warehousing",
+  "Tableau",
+  "Power BI",
+  "REST APIs",
+  "CI/CD",
+  "DBeaver",
+];
 
 const TAB_DATA = [
   {
@@ -27,20 +46,27 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        <li>Bachelor of Engineering(B.E.) in Computer Science, Maharashtra</li>
+      <ul className="list-disc pl-2 space-y-2">
+        <li>
+          Bachelor of Engineering (B.E.) in Computer Science — Prof Ram Meghe
+          College of Engineering and Management, Maharashtra (2016 – 2020),
+          Grade: 8.54 / 10
+        </li>
       </ul>
     ),
   },
-  // {
-  //   title: "Certifications",
-  //   id: "certifications",
-  //   content: (
-  //     <ul className="list-disc pl-2">
-  //       <li>AWS Cloud Practitioner</li>
-  //     </ul>
-  //   ),
-  // },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-2 space-y-2">
+        <li>AWS Certified Cloud Practitioner (in progress)</li>
+        <li>Advanced Python for Data Engineering</li>
+        <li>SQL Performance Tuning Specialization</li>
+        <li>Data Warehouse Design Best Practices</li>
+      </ul>
+    ),
+  },
 ];
 
 const AboutSection = () => {
@@ -68,10 +94,15 @@ const AboutSection = () => {
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mb-4" />
           <p className="text-[#ADB7BE] text-base lg:text-lg">
-            I am a Frontend Developer with over 4 years of professional experience in building responsive and user-friendly web applications.
-            I’ve worked on a variety of domains like logistics, healthcare, insurance, team management, banking and financial services, gaining valuable hands-on experience in real-world projects.
+            I am a Data Engineer with 5 years of experience designing, building,
+            and maintaining scalable data pipelines and analytics infrastructure
+            using Python, SQL, PostgreSQL, and cloud platforms (AWS, Azure). I
+            specialize in ETL/ELT development, data modeling, real-time data
+            processing, and warehouse optimization—partnering with analytics,
+            product, and backend teams to deliver reliable data solutions that
+            drive business decisions.
           </p>
-          <div className="flex flex-row justify-start items-start mt-8">
+          <div className="flex flex-row flex-wrap justify-start items-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -83,6 +114,12 @@ const AboutSection = () => {
               active={tab === "education"}
             >
               Education
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
+            >
+              Certifications
             </TabButton>
           </div>
           <div className="mt-8">
