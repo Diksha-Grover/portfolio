@@ -33,7 +33,7 @@ const DeviceSwitcher = () => {
 
   return (
     <>
-      <div className="fixed bottom-6 left-6 z-[70] flex items-center gap-1 p-1 rounded-full border border-purple-500/30 bg-[var(--bg-secondary)] shadow-lg shadow-purple-900/20 backdrop-blur-sm">
+      <div className="hidden lg:flex fixed bottom-6 left-6 z-[70] items-center gap-1 p-1 rounded-full border border-purple-500/30 bg-[var(--bg-secondary)] shadow-lg shadow-purple-900/20 backdrop-blur-sm">
         <button
           onClick={() => setDevice("mobile")}
           className={`${baseBtn} ${device === "mobile" ? activeBtn : idleBtn}`}
