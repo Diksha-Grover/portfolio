@@ -8,6 +8,7 @@ import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
 import ImpactMetrics from "./components/ImpactMetrics";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <EmailSection />
       </div>
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }
