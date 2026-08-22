@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.23.12",
@@ -16,8 +19,7 @@
     "react-animated-numbers": "^1.1.1",
     "react-dom": "19.1.0",
     "react-type-animation": "^3.2.0",
-    "resend": "^6.0.0",
-    "vercel": "^44.7.3"
+    "resend": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
