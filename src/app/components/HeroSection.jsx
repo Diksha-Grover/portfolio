@@ -92,7 +92,7 @@ const HeroSection = () => {
                 Hire Me
               </motion.button>
             </Link>
-            <a href="/dikshaFrontend.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Diksha_Grover_Resume.pdf" download="Diksha_Grover_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <motion.button 
                 className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1 text-white rounded-full transition-all duration-200"
                 whileHover={{ scale: 1.05, y: -2 }}
