@@ -16,6 +16,7 @@
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.23.12",
     "next": "^15.5.23",
+    "nodemailer": "^9.0.5",
     "react": "19.1.0",
     "react-animated-numbers": "^1.1.1",
     "react-dom": "19.1.0",

@@ -12,6 +12,8 @@ const EmailSection = () => {
     const [formState, setFormState] = useState({ email: "", subject: "", message: "" });
     const [touched, setTouched] = useState({ email: false, subject: false, message: false });
     const [submitted, setSubmitted] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [sendError, setSendError] = useState("");
     const [errors, setErrors] = useState({});
 
     const validateForm = () => {
@@ -44,13 +46,31 @@ const EmailSection = () => {
         const newErrors = validateForm();
         setErrors(newErrors);
 
-        if (Object.keys(newErrors).length === 0) {
+        if (Object.keys(newErrors).length !== 0) return;
+
+        setSending(true);
+        setSendError("");
+        try {
+            const res = await fetch("/api/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formState),
+            });
+
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                throw new Error(data.error || "Failed to send");
+            }
+
             setSubmitted(true);
             formRef.current.reset();
             setFormState({ email: "", subject: "", message: "" });
             setTouched({ email: false, subject: false, message: false });
-            
             setTimeout(() => setSubmitted(false), 4000);
+        } catch (err) {
+            setSendError("Something went wrong. Please try again or email me directly.");
+        } finally {
+            setSending(false);
         }
     };
 
@@ -194,24 +214,40 @@ const EmailSection = () => {
                     {/* Submit Button */}
                     <motion.button
                         type="submit"
-                        className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2.5 px-5 rounded-lg w-full hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-200"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                        disabled={sending}
+                        className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2.5 px-5 rounded-lg w-full hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                        whileHover={{ scale: sending ? 1 : 1.02 }}
+                        whileTap={{ scale: sending ? 1 : 0.98 }}
                     >
-                        Send message
+                        {sending ? "Sending\u2026" : "Send message"}
                     </motion.button>
                 </form>
 
                 {/* Success Message */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: submitted ? 1 : 0, y: submitted ? 0 : 10 }}
-                    transition={{ duration: 0.3 }}
-                    className="flex items-center gap-2 text-green-500 text-sm mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/30"
-                >
-                    <CheckCircleIcon className="w-5 h-5" />
-                    Email sent successfully! I&apos;ll get back to you soon.
-                </motion.div>
+                {submitted && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex items-center gap-2 text-green-500 text-sm mt-4 p-3 bg-green-500/10 rounded-lg border border-green-500/30"
+                    >
+                        <CheckCircleIcon className="w-5 h-5" />
+                        Email sent successfully! I&apos;ll get back to you soon.
+                    </motion.div>
+                )}
+
+                {/* Error Message */}
+                {sendError && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex items-center gap-2 text-red-500 text-sm mt-4 p-3 bg-red-500/10 rounded-lg border border-red-500/30"
+                    >
+                        <XCircleIcon className="w-5 h-5" />
+                        {sendError}
+                    </motion.div>
+                )}
             </motion.div>
         </motion.section>
     );
