@@ -41,7 +41,7 @@ const HeroSection = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold"
+            className="text-[var(--text-primary)] mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold"
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:from-pink-400 hover:to-purple-600 transition-all duration-300">
               Hello, I&apos;m{" "}
@@ -68,7 +68,7 @@ const HeroSection = () => {
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl hover:text-white transition-colors duration-300"
+            className="text-[var(--text-secondary)] text-base sm:text-lg mb-6 lg:text-xl hover:text-[var(--text-primary)] transition-colors duration-300"
           >
             Full Stack Developer with 5+ years of experience building scalable
             web applications and backend services using Python, JavaScript,
@@ -96,7 +96,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 cursor-pointer font-semibold transition-colors">
+                <span className="block bg-[var(--bg-primary)] text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] rounded-full px-5 py-2 cursor-pointer font-semibold transition-colors">
                   Download CV
                 </span>
               </motion.button>
@@ -120,7 +120,7 @@ const HeroSection = () => {
             transition={{ type: "spring", stiffness: 100, damping: 30 }}
           >
             <div className="animate-glow-pulse rounded-full p-1 bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500">
-              <div className="rounded-full bg-[#181818] w-[248px] h-[248px] lg:w-[398px] lg:h-[398px] relative overflow-hidden">
+              <div className="rounded-full bg-[var(--bg-secondary)] w-[248px] h-[248px] lg:w-[398px] lg:h-[398px] relative overflow-hidden">
                 <Image
                   src="/images/hero_image.png"
                   alt="hero image"

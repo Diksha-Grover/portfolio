@@ -44,7 +44,7 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${scrolled ? "bg-[#121212]/90 backdrop-blur-md shadow-lg shadow-purple-900/20 border-b border-white/5" : "bg-[#121212]/70 backdrop-blur-sm"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${scrolled ? "bg-[var(--bg-primary)]/90 backdrop-blur-md shadow-lg shadow-purple-900/20 border-b border-white/5" : "bg-[var(--bg-primary)]/70 backdrop-blur-sm"}`}>
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
         <Link
           href="/"
@@ -52,8 +52,25 @@ const Navbar = () => {
         >
           DG
         </Link>
-        
+
         <div className="flex items-center gap-4 md:gap-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:block md:w-auto" id="navbar-default">
+            <ul className="font-medium flex p-4 md:p-0 rounded-lg flex-row md:space-x-8 mt-0">
+              {navLinks.map((link, key) => {
+                return (
+                  <li key={key}>
+                    <NavLink
+                      key={link.title}
+                      title={link.title}
+                      href={link.path}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
           {/* Theme Toggle Button */}
           <motion.button
             onClick={toggleTheme}
@@ -97,23 +114,6 @@ const Navbar = () => {
               </motion.button>
             )}
           </div>
-        </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex p-4 md:p-0 rounded-lg flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, key) => {
-              return (
-                <li key={key}>
-                  <NavLink
-                    key={link.title}
-                    title={link.title}
-                    href={link.path}
-                  />
-                </li>
-              );
-            })}
-          </ul>
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}

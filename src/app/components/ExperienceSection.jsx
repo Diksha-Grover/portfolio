@@ -77,7 +77,7 @@ const ExperienceSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="text-white scroll-mt-20 py-8" ref={ref}>
+    <section id="experience" className="text-[var(--text-primary)] scroll-mt-20 py-8" ref={ref}>
       <div className="flex flex-col items-center mt-4 mb-8 md:mb-12">
         <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
           Experience
@@ -98,27 +98,27 @@ const ExperienceSection = () => {
             className="relative pl-12 md:pl-0 mb-10"
           >
             {/* dot */}
-            <span className="absolute left-4 md:left-1/2 top-2 w-4 h-4 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 ring-4 ring-[#121212] md:-translate-x-1/2 z-10" />
+            <span className="absolute left-4 md:left-1/2 top-2 w-4 h-4 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 ring-4 ring-[var(--bg-primary)] md:-translate-x-1/2 z-10" />
 
             <div
               className={`md:w-1/2 ${
                 index % 2 === 0 ? "md:pr-10" : "md:ml-auto md:pl-10"
               }`}
             >
-              <div className="bg-[#181818] border border-purple-500/10 rounded-xl p-6 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+              <div className="bg-[var(--bg-secondary)] border border-purple-500/10 rounded-xl p-6 hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
                 <span className="text-xs font-semibold text-pink-400 uppercase tracking-wide">
                   {exp.period}
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1">{exp.role}</h3>
+                <h3 className="text-lg font-bold text-[var(--text-primary)] mt-1">{exp.role}</h3>
                 <p className="text-purple-300 text-sm mb-3">{exp.company}</p>
 
-                <ul className="list-disc pl-4 space-y-1.5 text-[#ADB7BE] text-sm">
+                <ul className="list-disc pl-4 space-y-1.5 text-[var(--text-secondary)] text-sm">
                   {exp.points.map((p, i) => (
                     <li key={i}>{p}</li>
                   ))}
                 </ul>
 
-                <p className="text-white text-sm font-semibold mt-4 mb-1">
+                <p className="text-[var(--text-primary)] text-sm font-semibold mt-4 mb-1">
                   Key Achievements
                 </p>
                 <ul className="list-disc pl-4 space-y-1 text-green-400/90 text-sm">

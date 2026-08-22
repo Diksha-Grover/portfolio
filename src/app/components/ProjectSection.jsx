@@ -84,13 +84,13 @@ const ProjectsSection = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.4, delay: index * 0.15 }}
-            className="bg-[#181818] border border-purple-500/10 rounded-xl p-6 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300"
+            className="bg-[var(--bg-secondary)] border border-purple-500/10 rounded-xl p-6 hover:-translate-y-2 hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300"
           >
             <div className="text-3xl mb-3">{item.icon}</div>
-            <h3 className="text-lg font-semibold text-white mb-3">
+            <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-3">
               {item.title}
             </h3>
-            <ul className="list-disc pl-4 space-y-1.5 text-[#ADB7BE] text-sm">
+            <ul className="list-disc pl-4 space-y-1.5 text-[var(--text-secondary)] text-sm">
               {item.points.map((p, i) => (
                 <li key={i}>{p}</li>
               ))}

@@ -71,18 +71,18 @@ const EmailSection = () => {
                 <h5 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 my-2">
                     Let&apos;s Connect
                 </h5>
-                <p className="text-[#ADB7BE] mb-4 max-w-md hover:text-white transition-colors duration-300">
+                <p className="text-[var(--text-secondary)] mb-4 max-w-md hover:text-[var(--text-primary)] transition-colors duration-300">
                     I&apos;m open to Full Stack Developer opportunities and
                     collaborations. Whether you have a project, a role, or just
                     want to talk web apps and APIs, my inbox is always open&mdash;I&apos;ll
                     get back to you as soon as I can.
                 </p>
-                <div className="text-[#ADB7BE] text-sm space-y-1 mb-4">
+                <div className="text-[var(--text-secondary)] text-sm space-y-1 mb-4">
                     <motion.p whileHover={{ x: 5 }} className="transition-transform">
                         <span className="text-purple-300">Email:</span>{" "}
                         <a
                             href="mailto:thedikshagrover@gmail.com"
-                            className="hover:text-white transition-colors duration-200"
+                            className="hover:text-[var(--text-primary)] transition-colors duration-200"
                         >
                             thedikshagrover@gmail.com
                         </a>
@@ -115,7 +115,7 @@ const EmailSection = () => {
                     <div className="mb-6">
                         <label
                             htmlFor="email"
-                            className="text-white block mb-2 text-sm font-medium"
+                            className="text-[var(--text-primary)] block mb-2 text-sm font-medium"
                         >
                             Your email
                         </label>
@@ -128,7 +128,7 @@ const EmailSection = () => {
                                 value={formState.email}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
+                                className="bg-[var(--input-bg)] border border-[var(--input-border)] placeholder-[var(--input-placeholder)] text-[var(--text-primary)] text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
                                 placeholder="john@google.com"
                             />
                         </motion.div>
@@ -142,7 +142,7 @@ const EmailSection = () => {
                     <div className="mb-6">
                         <label
                             htmlFor="subject"
-                            className="text-white block text-sm mb-2 font-medium"
+                            className="text-[var(--text-primary)] block text-sm mb-2 font-medium"
                         >
                             Subject
                         </label>
@@ -155,7 +155,7 @@ const EmailSection = () => {
                                 value={formState.subject}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
+                                className="bg-[var(--input-bg)] border border-[var(--input-border)] placeholder-[var(--input-placeholder)] text-[var(--text-primary)] text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
                                 placeholder="Just saying hi"
                             />
                         </motion.div>
@@ -169,7 +169,7 @@ const EmailSection = () => {
                     <div className="mb-6">
                         <label
                             htmlFor="message"
-                            className="text-white block text-sm mb-2 font-medium"
+                            className="text-[var(--text-primary)] block text-sm mb-2 font-medium"
                         >
                             Message
                         </label>
@@ -181,7 +181,7 @@ const EmailSection = () => {
                                 value={formState.message}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
+                                className="bg-[var(--input-bg)] border border-[var(--input-border)] placeholder-[var(--input-placeholder)] text-[var(--text-primary)] text-sm rounded-lg block w-full p-2.5 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 outline-none transition-all duration-200"
                                 placeholder="Let's talk about..."
                             />
                         </motion.div>

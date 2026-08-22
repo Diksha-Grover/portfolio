@@ -64,11 +64,11 @@ const ProjectCard = ({ imgUrl, title, description, link, github, technologies = 
       </div>
 
       {/* Card Content */}
-      <div className="bg-[#181818] rounded-b-xl py-6 px-4 text-white border-t border-purple-500/10 transition-all duration-300">
+      <div className="bg-[var(--bg-secondary)] rounded-b-xl py-6 px-4 text-[var(--text-primary)] border-t border-purple-500/10 transition-all duration-300">
         <h5 className="font-lg font-semibold mb-2 group-hover/card:text-purple-300 transition-colors duration-200">
           {title}
         </h5>
-        <p className="text-[#ADB7BE] text-sm mb-3">{description}</p>
+        <p className="text-[var(--text-secondary)] text-sm mb-3">{description}</p>
 
         {/* Technology Tags */}
         {technologies.length > 0 && (
@@ -81,13 +81,13 @@ const ProjectCard = ({ imgUrl, title, description, link, github, technologies = 
             {technologies.slice(0, 3).map((tech, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-purple-500/20 border border-purple-500/40 rounded-full text-xs text-purple-300 hover:bg-purple-500/40 transition-all duration-200"
+                className="px-2 py-1 bg-[var(--chip-bg)] border border-[var(--chip-border)] rounded-full text-xs text-[var(--chip-text)] hover:bg-purple-500/40 transition-all duration-200"
               >
                 {tech}
               </span>
             ))}
             {technologies.length > 3 && (
-              <span className="px-2 py-1 text-xs text-[#ADB7BE]">
+              <span className="px-2 py-1 text-xs text-[var(--text-secondary)]">
                 +{technologies.length - 3} more
               </span>
             )}

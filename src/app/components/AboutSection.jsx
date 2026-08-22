@@ -42,7 +42,7 @@ const TAB_DATA = [
         {SKILLS.map((skill) => (
           <span
             key={skill}
-            className="px-3 py-1 bg-purple-500/20 border border-purple-500/40 rounded-full text-sm text-purple-300 hover:bg-purple-500/40 hover:border-purple-400 transition-all duration-200 cursor-default"
+            className="px-3 py-1 bg-[var(--chip-bg)] border border-[var(--chip-border)] rounded-full text-sm text-[var(--chip-text)] hover:bg-purple-500/40 hover:border-purple-400 transition-all duration-200 cursor-default"
           >
             {skill}
           </span>
@@ -88,7 +88,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="text-white scroll-mt-20" ref={ref}>
+    <section id="about" className="text-[var(--text-primary)] scroll-mt-20" ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -101,7 +101,7 @@ const AboutSection = () => {
             About Me
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mb-4" />
-          <p className="text-[#ADB7BE] text-base lg:text-lg">
+          <p className="text-[var(--text-secondary)] text-base lg:text-lg">
             I am a Full Stack Developer with 5+ years of experience building
             scalable web applications and backend services across the stack
             using Python, JavaScript, TypeScript, React, and PostgreSQL. I

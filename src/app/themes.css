@@ -1,0 +1,59 @@
+/* Theme color tokens — single source of truth for dark & light palettes.
+   Add or tweak values here; components consume them via var(--token). */
+
+/* Default (dark) so colors resolve before JS sets data-theme */
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #181818;
+  --bg-tertiary: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #ADB7BE;
+  --border-color: rgba(168, 85, 247, 0.2);
+  --border-hover: rgba(168, 85, 247, 0.5);
+  --input-bg: #18191E;
+  --input-border: #33353F;
+  --input-placeholder: #9CA2A9;
+  --card-from: #1a1a2e;
+  --card-to: #16213e;
+  --chip-bg: rgba(168, 85, 247, 0.2);
+  --chip-border: rgba(168, 85, 247, 0.4);
+  --chip-text: #d8b4fe;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #181818;
+  --bg-tertiary: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #ADB7BE;
+  --border-color: rgba(168, 85, 247, 0.2);
+  --border-hover: rgba(168, 85, 247, 0.5);
+  --input-bg: #18191E;
+  --input-border: #33353F;
+  --input-placeholder: #9CA2A9;
+  --card-from: #1a1a2e;
+  --card-to: #16213e;
+  --chip-bg: rgba(168, 85, 247, 0.2);
+  --chip-border: rgba(168, 85, 247, 0.4);
+  --chip-text: #d8b4fe;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f3f7;
+  --text-primary: #121212;
+  --text-secondary: #666666;
+  --border-color: rgba(168, 85, 247, 0.15);
+  --border-hover: rgba(168, 85, 247, 0.4);
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+  --input-placeholder: #9CA2A9;
+  --card-from: #ffffff;
+  --card-to: #eef1f6;
+  --chip-bg: rgba(168, 85, 247, 0.12);
+  --chip-border: rgba(168, 85, 247, 0.35);
+  --chip-text: #7e22ce;
+}

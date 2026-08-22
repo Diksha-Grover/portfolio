@@ -104,7 +104,7 @@ const ExperienceTimeline = () => {
   };
 
   return (
-    <section id="experience" className="text-white scroll-mt-20 py-8 md:py-16" ref={ref}>
+    <section id="experience" className="text-[var(--text-primary)] scroll-mt-20 py-8 md:py-16" ref={ref}>
       <div className="flex flex-col items-center mt-4 mb-12">
         <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
           Experience
@@ -131,7 +131,7 @@ const ExperienceTimeline = () => {
               {/* Timeline dot */}
               <div className="flex flex-col items-center">
                 <motion.div
-                  className="w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full border-4 border-[#121212] cursor-pointer hover:scale-125 transition-transform"
+                  className="w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full border-4 border-[var(--bg-primary)] cursor-pointer hover:scale-125 transition-transform"
                   whileHover={{ scale: 1.3 }}
                   onClick={() => setExpandedIndex(expandedIndex === index ? -1 : index)}
                 />
@@ -147,17 +147,17 @@ const ExperienceTimeline = () => {
               >
                 <motion.div
                   onClick={() => setExpandedIndex(expandedIndex === index ? -1 : index)}
-                  className="group bg-[#181818] border border-purple-500/20 rounded-lg p-6 cursor-pointer hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+                  className="group bg-[var(--bg-secondary)] border border-purple-500/20 rounded-lg p-6 cursor-pointer hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
                   whileHover={{ y: -8 }}
                 >
                   {/* Header */}
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                      <h3 className="text-xl font-bold text-[var(--text-primary)] group-hover:text-purple-300 transition-colors">
                         {experience.role}
                       </h3>
                       <p className="text-purple-400 font-medium mt-1">{experience.company}</p>
-                      <p className="text-[#ADB7BE] text-sm mt-2">{experience.period}</p>
+                      <p className="text-[var(--text-secondary)] text-sm mt-2">{experience.period}</p>
                     </div>
                     <motion.div
                       animate={{ rotate: expandedIndex === index ? 180 : 0 }}
@@ -168,14 +168,14 @@ const ExperienceTimeline = () => {
                   </div>
 
                   {/* Always-visible summary + tech chips */}
-                  <p className="text-[#ADB7BE] text-sm mt-3">
+                  <p className="text-[var(--text-secondary)] text-sm mt-3">
                     {experience.summary}
                   </p>
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {experience.stack.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2.5 py-0.5 bg-purple-500/15 border border-purple-500/30 rounded-full text-xs text-purple-300"
+                        className="px-2.5 py-0.5 bg-[var(--chip-bg)] border border-[var(--chip-border)] rounded-full text-xs text-[var(--chip-text)]"
                       >
                         {tech}
                       </span>
@@ -202,13 +202,13 @@ const ExperienceTimeline = () => {
                   >
                     {/* Points */}
                     <div className="mb-4">
-                      <h4 className="font-semibold text-white mb-2 flex items-center">
+                      <h4 className="font-semibold text-[var(--text-primary)] mb-2 flex items-center">
                         <span className="w-2 h-2 bg-purple-400 rounded-full mr-2" />
                         Responsibilities
                       </h4>
                       <ul className="space-y-2">
                         {experience.points.map((point, i) => (
-                          <li key={i} className="text-[#ADB7BE] text-sm flex gap-3">
+                          <li key={i} className="text-[var(--text-secondary)] text-sm flex gap-3">
                             <span className="text-purple-400 flex-shrink-0">•</span>
                             <span>{point}</span>
                           </li>
@@ -224,7 +224,7 @@ const ExperienceTimeline = () => {
                       </h4>
                       <ul className="space-y-2">
                         {experience.achievements.map((achievement, i) => (
-                          <li key={i} className="text-[#ADB7BE] text-sm flex gap-3">
+                          <li key={i} className="text-[var(--text-secondary)] text-sm flex gap-3">
                             <span className="text-emerald-400 flex-shrink-0">✓</span>
                             <span className="text-emerald-300">{achievement}</span>
                           </li>

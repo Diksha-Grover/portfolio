@@ -92,7 +92,7 @@ const ImpactMetrics = () => {
           <motion.div
             key={index}
             variants={metricVariants}
-            className="group relative bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/50 overflow-hidden transition-all duration-300 cursor-default"
+            className="group relative bg-gradient-to-br from-[var(--card-from)] to-[var(--card-to)] border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/50 overflow-hidden transition-all duration-300 cursor-default"
           >
             {/* Animated background glow */}
             <div
@@ -112,10 +112,10 @@ const ImpactMetrics = () => {
                     {metric.unit}
                   </span>
                 </div>
-                <h3 className="text-white font-semibold text-lg mb-2">
+                <h3 className="text-[var(--text-primary)] font-semibold text-lg mb-2">
                   {metric.title}
                 </h3>
-                <p className="text-[#ADB7BE] text-sm leading-relaxed">
+                <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
                   {metric.description}
                 </p>
               </div>
