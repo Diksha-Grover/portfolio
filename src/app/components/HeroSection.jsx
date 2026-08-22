@@ -41,9 +41,9 @@ const HeroSection = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold"
+            className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold"
           >
-            <span className="text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:from-pink-400 hover:to-purple-600 transition-all duration-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:from-pink-400 hover:to-purple-600 transition-all duration-300">
               Hello, I&apos;m{" "}
             </span>{" "}
             <br />
@@ -51,29 +51,31 @@ const HeroSection = () => {
               sequence={[
                 "Diksha Grover",
                 1000,
-                "Data Engineer",
+                "Full Stack Developer",
                 1000,
-                "Analytics Engineer",
+                "Frontend Developer",
                 1000,
-                "Cloud Data Specialist",
+                "Backend Developer",
                 1000,
-                "ML Pipeline Architect",
+                "React & Next.js Developer",
                 1000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
+              className="inline-block whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
             />
           </motion.h1>
           <motion.p
             variants={itemVariants}
             className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl hover:text-white transition-colors duration-300"
           >
-            Data Engineer with 5 years of experience designing scalable data
-            pipelines and analytics infrastructure using Python, SQL, and cloud
-            platforms (AWS, Azure). I turn raw, disparate data into reliable,
-            production-grade systems that drive business decisions.
+            Full Stack Developer with 5+ years of experience building scalable
+            web applications and backend services using Python, JavaScript,
+            TypeScript, React, and PostgreSQL. I design REST APIs, responsive
+            front-end interfaces, and cloud deployments on AWS and Azure that
+            deliver end-to-end features across finance, healthcare, and
+            logistics domains.
           </motion.p>
           <motion.div 
             variants={itemVariants}
@@ -88,7 +90,7 @@ const HeroSection = () => {
                 Hire Me
               </motion.button>
             </Link>
-            <a href="/dikshaDataEngineer.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/dikshaFrontend.pdf" target="_blank" rel="noopener noreferrer">
               <motion.button 
                 className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1 text-white rounded-full transition-all duration-200"
                 whileHover={{ scale: 1.05, y: -2 }}

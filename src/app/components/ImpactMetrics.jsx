@@ -1,40 +1,52 @@
 "use client";
-import React, { useRef } from "react";
-import dynamic from "next/dynamic";
-import { motion, useInView } from "framer-motion";
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useInView, useMotionValue, animate } from "framer-motion";
 
-const AnimatedNumbers = dynamic(
-  () => import("react-animated-numbers"),
-  { ssr: false }
-);
+// Counts up to `value` once the section scrolls into view.
+const CountUp = ({ value, isInView, className }) => {
+  const motionValue = useMotionValue(0);
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const controls = animate(motionValue, value, {
+      duration: 1.5,
+      ease: "easeOut",
+      onUpdate: (latest) => setDisplay(Math.round(latest)),
+    });
+    return () => controls.stop();
+  }, [isInView, value, motionValue]);
+
+  return <span className={className}>{display}</span>;
+};
 
 const impactMetrics = [
   {
-    title: "Pipeline Optimization",
+    title: "API Latency",
     value: "40",
     unit: "%",
-    description: "Reduced execution time via Spark parallelization",
+    description: "Reduction in response times via query and API optimization",
     color: "from-blue-400 to-cyan-400",
   },
   {
-    title: "Data Accuracy",
+    title: "Cloud Uptime",
     value: "99",
-    unit: ".8%",
-    description: "Improvement with automated quality checks",
+    unit: ".9%",
+    description: "Sustained on Azure through proactive monitoring",
     color: "from-green-400 to-emerald-400",
   },
   {
-    title: "Cost Reduction",
-    value: "25",
+    title: "Production Defects",
+    value: "35",
     unit: "%",
-    description: "Storage costs via optimized warehouse schema",
+    description: "Reduction with Pytest-based validation checks",
     color: "from-orange-400 to-red-400",
   },
   {
-    title: "AWS Migration Savings",
+    title: "Release Cycle Time",
     value: "30",
     unit: "%",
-    description: "Cost reduction on cloud infrastructure",
+    description: "Faster delivery through automated CI/CD pipelines",
     color: "from-purple-400 to-pink-400",
   },
 ];
@@ -90,17 +102,11 @@ const ImpactMetrics = () => {
             {/* Content */}
             <div className="relative z-10">
               <div className="text-center">
-                <div className="inline-flex items-baseline justify-center mb-4">
-                  <AnimatedNumbers
-                    includeComma
-                    animateToNumber={parseInt(metric.value)}
-                    locale="en-US"
+                <div className="inline-flex items-center justify-center mb-4 leading-tight py-1">
+                  <CountUp
+                    value={parseInt(metric.value)}
+                    isInView={isInView}
                     className={`text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${metric.color}`}
-                    configs={(_, index) => ({
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    })}
                   />
                   <span className={`text-2xl ml-1 font-bold bg-clip-text text-transparent bg-gradient-to-r ${metric.color}`}>
                     {metric.unit}

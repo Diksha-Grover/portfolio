@@ -72,9 +72,9 @@ const EmailSection = () => {
                     Let&apos;s Connect
                 </h5>
                 <p className="text-[#ADB7BE] mb-4 max-w-md hover:text-white transition-colors duration-300">
-                    I&apos;m open to Data Engineering opportunities and
+                    I&apos;m open to Full Stack Developer opportunities and
                     collaborations. Whether you have a project, a role, or just
-                    want to talk data pipelines, my inbox is always open—I&apos;ll
+                    want to talk web apps and APIs, my inbox is always open&mdash;I&apos;ll
                     get back to you as soon as I can.
                 </p>
                 <div className="text-[#ADB7BE] text-sm space-y-1 mb-4">

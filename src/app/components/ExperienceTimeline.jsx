@@ -5,71 +5,84 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const experiences = [
   {
-    role: "Consultant – Data Engineering",
+    role: "Consultant – Full Stack Developer",
     company: "Topsoe, Noida",
     period: "Oct 2025 – Present",
+    summary:
+      "Backend APIs and cloud services powering Topsoe's internal web platforms.",
     points: [
-      "Designed and built scalable ETL/ELT pipelines with Python and Apache Spark to ingest, transform, and load enterprise data across Clearview-Api-Services, Topsearch, and Self-Service-Tool.",
-      "Optimized PostgreSQL queries and implemented data warehouse schemas for complex analytical workloads.",
-      "Developed REST APIs for data access and built data validation frameworks with real-time monitoring.",
-      "Supported cloud data infrastructure on Azure including storage optimization, cost management, and performance tuning.",
+      "Built Python REST APIs and backend services powering internal web platforms (Topsearch, Clearview), integrating with front-end reporting interfaces.",
+      "Optimized PostgreSQL queries and API response times, reducing latency by 40% and improving dashboard performance by 45%.",
+      "Automated build, test, and deployment through CI/CD pipelines, cutting release cycle time by 30%.",
+      "Deployed and monitored cloud-hosted services on Azure, sustaining 99.9% uptime through proactive troubleshooting and performance tuning.",
+      "Led peer code reviews and defined documentation and coding standards, mentoring engineers on modular design and secure practices.",
     ],
     achievements: [
-      "Reduced pipeline execution time by 40% via query optimization and Spark parallelization",
-      "Improved data accuracy from 94% to 99.8% with automated quality checks",
-      "Cut storage costs by 25% through optimized warehouse schema design",
+      "Reduced API latency by 40% and improved dashboard performance by 45%",
+      "Cut release cycle time by 30% through automated CI/CD pipelines",
+      "Sustained 99.9% uptime on Azure cloud-hosted services",
     ],
-    stack: ["Python", "Apache Spark", "PostgreSQL", "REST APIs", "Azure Data Factory", "Pandas", "Airflow"],
+    stack: ["Python", "FastAPI", "TypeScript", "React", "REST APIs", "PostgreSQL", "CI/CD", "Azure", "Docker", "Git"],
   },
   {
-    role: "Senior Engineering Analyst – Data Platform",
-    company: "Qualtech Edge, Noida",
+    role: "Sr. Engineering Analyst – Full Stack Developer",
+    company: "Qualtech, Noida",
     period: "May 2024 – Mar 2025",
+    summary:
+      "Full-stack lending platform serving 1M+ monthly users at MyMoneyMantra.",
     points: [
-      "Led data engineering initiatives and architecture decisions for analytics and SaaS data platforms.",
-      "Built CRUD-based data APIs and ETL workflows with Python and FastAPI, processing 500K+ records daily.",
-      "Optimized database performance through query tuning, indexing, and schema design—improving query times by 45%.",
-      "Worked extensively with AWS (S3, Lambda, RDS, Glue) for scalable data processing and storage.",
+      "Developed FastAPI backend services and REST API integrations supporting MyMoneyMantra loan discovery, eligibility checks, and partner journeys across 1M+ monthly users.",
+      "Built responsive front-end workflows and dashboards surfacing lending data across customer-facing journeys, reducing manual handoffs by 60%.",
+      "Implemented caching tiers, partitioning, and archival strategies that cut report runtimes by 40% without impacting freshness.",
+      "Strengthened reliability with Pytest-based validation checks, reducing production defects by 35%.",
+      "Owned end-to-end feature delivery and drove Agile sprint execution, mentoring 3 junior engineers through code reviews.",
     ],
     achievements: [
-      "Architected platform handling 2TB+ monthly ingestion with 99.9% uptime",
-      "Reduced manual validation efforts by 60% via automated reconciliation",
-      "Led on-premise to AWS migration achieving 30% cost reduction",
+      "Supported loan journeys across 1M+ monthly users",
+      "Reduced manual handoffs by 60% and report runtimes by 40%",
+      "Cut production defects by 35% with Pytest validation checks",
     ],
-    stack: ["Python", "FastAPI", "PostgreSQL", "AWS", "Pandas", "Airflow", "DBeaver"],
+    stack: ["Python", "FastAPI", "React", "REST APIs", "SQL", "PostgreSQL", "Pytest", "AWS", "Git"],
   },
   {
-    role: "Software Engineer – Data Integration",
-    company: "Mtap Technologies, Gurugram",
+    role: "Software Engineer – Full Stack Developer",
+    company: "MTAP Technologies, Gurugram",
     period: "Jan 2023 – May 2024",
+    summary:
+      "End-to-end SaaS features for Autologix fleet booking and dispatch.",
     points: [
-      "Migrated legacy data infrastructure to modern cloud-based analytics platforms using Python and SQL.",
-      "Built REST APIs for data integration between upstream sources and downstream analytics systems.",
-      "Designed dimensional data models and star schemas, implementing ETL pipelines for consolidation and enrichment.",
-      "Participated in AWS cloud deployments for analytics infrastructure and data services.",
+      "Built end-to-end features for Autologix SaaS booking, fleet operations, dispatching, and tracking using Python, React, and PostgreSQL for 500+ daily transactions.",
+      "Developed responsive front-end interfaces in JavaScript/React and modular backend services connected through REST APIs.",
+      "Designed normalized database schemas and API integrations that unified operations modules, improving reporting turnaround by 30%.",
+      "Containerized services with Docker and wired CI/CD pipelines into AWS, reducing deployment errors by 25%.",
+      "Partnered with operations and QA teams across Agile sprints to ship dispatch and tracking features with reliable, on-time releases.",
     ],
     achievements: [
-      "Integrated 8+ heterogeneous data sources into a unified analytics platform",
-      "Reduced data latency from 6 hours to 30 minutes via stream processing",
-      "Documented data lineage for 200+ datasets",
+      "Delivered features handling 500+ daily transactions",
+      "Improved reporting turnaround by 30% with unified operations modules",
+      "Reduced deployment errors by 25% via Docker and CI/CD on AWS",
     ],
-    stack: ["Python", "SQL", "REST APIs", "AWS", "Pandas", "PostgreSQL", "Git"],
+    stack: ["Python", "JavaScript", "React", "REST APIs", "PostgreSQL", "Docker", "AWS", "Git"],
   },
   {
-    role: "Junior Data Engineer / Backend Developer",
-    company: "Crownstack Technologies, Remote",
+    role: "Software Engineer – Full Stack Developer",
+    company: "Crownstack, Remote",
     period: "Oct 2021 – Jan 2023",
+    summary:
+      "Full-stack healthcare product features delivered across multiple teams.",
     points: [
-      "Developed and maintained data pipelines and backend services using Python and SQL.",
-      "Implemented data validation, transformation logic, and error handling for ETL workflows.",
-      "Assisted with AWS-based data infrastructure setup and backend data service deployments.",
+      "Delivered full-stack features using Python, JavaScript, React, and SQL for healthcare product engineering and digital transformation initiatives.",
+      "Built reusable front-end components and backend modules with database integrations across MySQL and NoSQL stores, supporting 4+ product teams.",
+      "Optimized queries, API flows, and UI rendering, reducing average response and load times by 30%.",
+      "Hardened authentication flows and documented deployment runbooks, cutting incident resolution time by 20%.",
+      "Collaborated with cross-functional teams to translate healthcare requirements into reliable, well-documented full-stack solutions.",
     ],
     achievements: [
-      "Developed 15+ ETL pipelines supporting various business domains",
-      "Achieved 98% data accuracy through comprehensive validation frameworks",
-      "Supported onboarding of 5+ new data sources to the analytics platform",
+      "Supported 4+ product teams with reusable components and backend modules",
+      "Reduced average response and load times by 30%",
+      "Cut incident resolution time by 20% with hardened auth and runbooks",
     ],
-    stack: ["Python", "SQL", "AWS", "PostgreSQL", "Testing", "Git"],
+    stack: ["Python", "JavaScript", "React", "SQL", "MySQL", "Git", "AWS"],
   },
 ];
 
@@ -154,6 +167,28 @@ const ExperienceTimeline = () => {
                     </motion.div>
                   </div>
 
+                  {/* Always-visible summary + tech chips */}
+                  <p className="text-[#ADB7BE] text-sm mt-3">
+                    {experience.summary}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {experience.stack.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-2.5 py-0.5 bg-purple-500/15 border border-purple-500/30 rounded-full text-xs text-purple-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Expand hint */}
+                  <div className="flex items-center gap-1 mt-3 text-xs font-medium text-purple-400/80 group-hover:text-purple-300 transition-colors">
+                    <span>
+                      {expandedIndex === index ? "Hide details" : "View details"}
+                    </span>
+                  </div>
+
                   {/* Expandable Content */}
                   <motion.div
                     initial={false}
@@ -182,7 +217,7 @@ const ExperienceTimeline = () => {
                     </div>
 
                     {/* Key Achievements */}
-                    <div className="mb-4">
+                    <div>
                       <h4 className="font-semibold text-emerald-400 mb-2 flex items-center">
                         <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2" />
                         Key Achievements
@@ -195,24 +230,6 @@ const ExperienceTimeline = () => {
                           </li>
                         ))}
                       </ul>
-                    </div>
-
-                    {/* Tech Stack */}
-                    <div>
-                      <h4 className="font-semibold text-white mb-2 flex items-center">
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2" />
-                        Tech Stack
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {experience.stack.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 bg-purple-500/20 border border-purple-500/40 rounded-full text-xs text-purple-300 hover:bg-purple-500/40 hover:border-purple-400 transition-all duration-200"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </motion.div>
                 </motion.div>

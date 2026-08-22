@@ -15,20 +15,19 @@ const achievementsList = [
     postfix: "+",
   },
   {
-    metric: "ETL Pipelines",
+    metric: "Projects Delivered",
     value: "30",
     postfix: "+",
   },
   {
-    prefix: "~",
-    metric: "Records / Day",
-    value: "500",
-    postfix: "K+",
+    metric: "Monthly Users Served",
+    value: "1",
+    postfix: "M+",
   },
   {
-    metric: "Data Accuracy",
+    metric: "Cloud Uptime",
     value: "99",
-    postfix: ".8%",
+    postfix: ".9%",
   },
 ];
 

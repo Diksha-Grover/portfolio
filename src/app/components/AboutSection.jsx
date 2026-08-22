@@ -5,24 +5,32 @@ import TabButton from "./TabButton";
 import { motion, useInView } from "framer-motion";
 
 const SKILLS = [
+  "JavaScript",
+  "TypeScript",
   "Python",
   "SQL",
-  "PostgreSQL",
-  "Apache Spark",
-  "Airflow",
-  "Pandas",
-  "NumPy",
+  "React",
+  "Next.js",
+  "Redux Toolkit",
+  "RTK Query",
+  "HTML5",
+  "CSS3",
   "FastAPI",
-  "AWS (S3, Lambda, Glue, Athena, RDS)",
-  "Azure (Data Factory, Synapse)",
-  "ETL / ELT",
-  "Data Modeling",
-  "Data Warehousing",
-  "Tableau",
-  "Power BI",
+  "Django",
+  "Flask",
   "REST APIs",
+  "Microservices",
+  "Authentication",
+  "PostgreSQL",
+  "MySQL",
+  "Redis",
+  "AWS",
+  "Azure",
+  "Docker",
   "CI/CD",
-  "DBeaver",
+  "Git",
+  "Pytest",
+  "Jira",
 ];
 
 const TAB_DATA = [
@@ -56,14 +64,14 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Expertise",
+    id: "expertise",
     content: (
       <ul className="list-disc pl-2 space-y-2">
-        <li>AWS Certified Cloud Practitioner (in progress)</li>
-        <li>Advanced Python for Data Engineering</li>
-        <li>SQL Performance Tuning Specialization</li>
-        <li>Data Warehouse Design Best Practices</li>
+        <li>Full-Stack Web Development (React, Next.js, FastAPI)</li>
+        <li>REST API Design &amp; Microservices Architecture</li>
+        <li>Database Design &amp; Query Optimization</li>
+        <li>CI/CD Pipelines &amp; Cloud Deployment (AWS, Azure)</li>
       </ul>
     ),
   },
@@ -94,13 +102,13 @@ const AboutSection = () => {
           </h2>
           <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full mb-4" />
           <p className="text-[#ADB7BE] text-base lg:text-lg">
-            I am a Data Engineer with 5 years of experience designing, building,
-            and maintaining scalable data pipelines and analytics infrastructure
-            using Python, SQL, PostgreSQL, and cloud platforms (AWS, Azure). I
-            specialize in ETL/ELT development, data modeling, real-time data
-            processing, and warehouse optimization—partnering with analytics,
-            product, and backend teams to deliver reliable data solutions that
-            drive business decisions.
+            I am a Full Stack Developer with 5+ years of experience building
+            scalable web applications and backend services across the stack
+            using Python, JavaScript, TypeScript, React, and PostgreSQL. I
+            specialize in designing REST APIs, responsive front-end interfaces,
+            and cloud deployments on AWS and Azure&mdash;with strong expertise in
+            performance optimization, CI/CD, and delivering end-to-end features
+            across finance, healthcare, and logistics domains.
           </p>
           <div className="flex flex-row flex-wrap justify-start items-start mt-8">
             <TabButton
@@ -116,10 +124,10 @@ const AboutSection = () => {
               Education
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("expertise")}
+              active={tab === "expertise"}
             >
-              Certifications
+              Expertise
             </TabButton>
           </div>
           <div className="mt-8">
