@@ -36,7 +36,7 @@ const HeroSection = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="col-span-8 min-w-0 place-self-center text-center sm:text-left justify-self-start"
         >
           <motion.h1
             variants={itemVariants}
@@ -46,24 +46,27 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>{" "}
             <br />
-            <TypeAnimation
-              sequence={[
-                "Diksha Grover",
-                1000,
-                "Full Stack Developer",
-                1000,
-                "Frontend Developer",
-                1000,
-                "Backend Developer",
-                1000,
-                "React & Next.js Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-              className="inline-block whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
-            />
+            {/* Reserve height so cycling phrases don't shift the layout */}
+            <span className="block min-h-[3.6em] sm:min-h-[3.75em] lg:min-h-[2.4em]">
+              <TypeAnimation
+                sequence={[
+                  "Diksha Grover",
+                  1000,
+                  "Full Stack Developer",
+                  1000,
+                  "Frontend Developer",
+                  1000,
+                  "Backend Developer",
+                  1000,
+                  "React & Next.js Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
+              />
+            </span>
           </motion.h1>
           <motion.p
             variants={itemVariants}

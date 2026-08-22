@@ -98,7 +98,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white transition-colors duration-200"
+                className="flex items-center px-3 py-2 border rounded text-[var(--text-primary)] border-[var(--input-border)] hover:border-purple-400 hover:text-purple-400 transition-colors duration-200"
                 onClick={() => setNavbarOpen(true)}
               >
                 <Bars3Icon className="h-5 w-5" />
@@ -107,7 +107,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center px-3 py-2 border rounded text-slate-200 border-slate-200 hover:text-white hover:border-white transition-colors duration-200"
+                className="flex items-center px-3 py-2 border rounded text-[var(--text-primary)] border-[var(--input-border)] hover:border-purple-400 hover:text-purple-400 transition-colors duration-200"
                 onClick={() => setNavbarOpen(false)}
               >
                 <XMarkIcon className="h-5 w-5" />

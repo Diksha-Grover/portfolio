@@ -119,7 +119,7 @@ const ExperienceTimeline = () => {
         variants={timelineVariants}
       >
         {/* Timeline line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 opacity-30" />
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 opacity-30" />
 
         <div className="space-y-8 md:space-y-12">
           {experiences.map((experience, index) => (
