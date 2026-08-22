@@ -18,6 +18,7 @@
   --chip-bg: rgba(168, 85, 247, 0.2);
   --chip-border: rgba(168, 85, 247, 0.4);
   --chip-text: #d8b4fe;
+  --grid-line: rgba(255, 255, 255, 0.035);
 }
 
 /* Dark theme */
@@ -37,6 +38,7 @@
   --chip-bg: rgba(168, 85, 247, 0.2);
   --chip-border: rgba(168, 85, 247, 0.4);
   --chip-text: #d8b4fe;
+  --grid-line: rgba(255, 255, 255, 0.035);
 }
 
 /* Light theme */
@@ -56,4 +58,5 @@
   --chip-bg: rgba(168, 85, 247, 0.12);
   --chip-border: rgba(168, 85, 247, 0.35);
   --chip-text: #7e22ce;
+  --grid-line: rgba(0, 0, 0, 0.05);
 }
