@@ -74,20 +74,21 @@ const Navbar = () => {
           {/* Theme Toggle Button */}
           <motion.button
             onClick={toggleTheme}
-            className="p-2 rounded-lg border border-purple-500/30 hover:border-purple-400 hover:bg-purple-500/10 transition-all duration-300"
+            className="flex items-center justify-center p-2 rounded-lg border border-purple-500/30 hover:border-purple-400 hover:bg-purple-500/10 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
           >
             <motion.div
+              className="flex items-center justify-center"
               initial={false}
-              animate={{ rotate: theme === 'dark' ? 0 : 180 }}
+              animate={{ rotate: 0 }}
               transition={{ duration: 0.3 }}
             >
               {theme === 'dark' ? (
                 <SunIcon className="h-5 w-5 text-yellow-400" />
               ) : (
-                <MoonIcon className="h-5 w-5 text-purple-400" />
+                <MoonIcon className="h-5 w-5 text-purple-600" />
               )}
             </motion.div>
           </motion.button>
